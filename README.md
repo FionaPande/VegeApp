@@ -14,6 +14,7 @@ The React Native Application includes the following features:
 * User Interface depends on Data received from backend as JSON
 * Most important Screens: HomeScreen showing all Categories -> CategoryProductScreen which shows all products added to that specific category and ProductDetailScreen
 which shows additional information about the project
+* search functionality to search for a specific product by title in its category
 
 The Django Application includes the following features:
 * Basic CRUD operations for adding, deleting and editing items
