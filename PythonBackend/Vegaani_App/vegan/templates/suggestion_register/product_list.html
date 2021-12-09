@@ -1,0 +1,36 @@
+{% extends "product_register/base.html" %}
+
+
+{% block content %}
+
+<a href="{% url 'product_insert' %}" class="btn btn-secondary">
+    <i class="fas fa-plus"></i> Add New
+</a>
+<a href="{% url 'product_list' %}" class="btn btn-secondary">
+    <i class="fas fa-plus"></i> Show Products
+</a>
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Title</td>
+            <td>Brand</td>
+            <td>Description</td>
+            <td>Suggestion ID</td>
+         
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in suggestion_list %}
+            <tr>
+                <td>{{product.title}}</td>
+                <td>{{product.brand}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.id}}</td>
+              
+               
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

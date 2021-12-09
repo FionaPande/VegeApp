@@ -1,0 +1,66 @@
+{% extends "product_register/base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6">
+    {{form.title|as_crispy_field}}
+</div>
+<div class="col-md-6">
+    {{form.brand|as_crispy_field}}
+</div>
+</div>
+    <div class="row">
+        <div class="col-md-4">
+            {{form.position|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.stores|as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+            {{form.image|as_crispy_field}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form.suggestionID|as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+            {{form.suggestionID_2|as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+            {{form.suggestionID_3|as_crispy_field}}
+        </div>
+    </div>
+   
+    
+    <div class="row">
+        <div class="col-md-6">
+    {{form.description|as_crispy_field}}
+</div>
+<div class="col-md-6">
+    {{form.reference|as_crispy_field}}
+</div>
+    
+</div>
+    <div class="row">
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-secondary btn-block btn-lg"><i class="fas fa-database"></i>
+                Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'product_list' %}" class="btn btn-secondary btn-block btn-lg">
+                <i class="fas fa-stream"></i> Back to list
+            </a>
+        </div>
+    </div>
+
+</form>
+{% endblock content %}
